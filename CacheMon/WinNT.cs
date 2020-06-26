@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Diagnostics.Eventing.Reader;
 using System.Runtime.InteropServices;
 using System.Security.Principal;
 using static CacheMon.Enums;
@@ -47,14 +46,19 @@ namespace CacheMon
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Internal Function Declaration")]
         private static extern bool _EmptyWorkingSet(IntPtr hHandle);
 
+        #endregion
+
+
+        #region NTProcessControl
         [DllImport("kernel32.dll", CharSet = CharSet.Auto, EntryPoint = "OpenProcess", CallingConvention = CallingConvention.StdCall, SetLastError = true)]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Internal Function Declaration")]
         private static extern IntPtr _OpenProcess(uint dwDesiredAccess, bool bInheritHandle, int dwProcessId);
-        #endregion
+
 
         [DllImport("kernel32.dll", CharSet = CharSet.Auto, EntryPoint = "CloseProcess", CallingConvention = CallingConvention.StdCall, SetLastError = true)]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Internal Function Declaration")]
         private static extern bool _ReleaseProcess(IntPtr hProcess);
+        #endregion
 
 
         public static PERFORMANCE_INFORMATION GetPerfInfo()
@@ -228,11 +232,7 @@ namespace CacheMon
 
         }
 
-        /*
-        [DllImport("kernel32.dll")]
-        public static extern bool SetSystemFileCacheSize(IntPtr MinimumFileCacheSize, IntPtr MaximumFileCacheSize, int Flags);
-
-        */
+  
 
 
 
