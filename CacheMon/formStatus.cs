@@ -41,6 +41,9 @@ namespace CacheMon
 
             }
 
+            Runtime.SystrayIcon.Text = string.Concat(Program.AppName, " ", (Runtime.uiThread.Enabled ? "Running" : "Stopped"));
+
+
         }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Internal Function Declaration")]
