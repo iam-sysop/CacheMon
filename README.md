@@ -1,7 +1,7 @@
 # CacheMon
 ### Windows 10 Standby Cache Monitor and Flusher
 
-Windows 8 and 10 includes a VERY AGGRESSIVE file/memory caching system.  During idle periods, the OS will tend to populate this Standy Cache with data based on your app and file usage.  In many circumstances, this cache will consume ALL free physical RAM, and even though Windows is supposed to cast this data away, many instances see high swapping issues instead, with Windows refusing to let go of the cached files in memory.  This leads to degraded performance in many instances.
+Windows 8 and 10 includes a VERY AGGRESSIVE file/memory caching system.  During idle periods, the OS will tend to populate this Standby Cache with data based on your app and file usage.  In many circumstances, this cache will consume ALL free physical RAM, and even though Windows is supposed to cast this data away, many instances see high swapping issues instead, with Windows refusing to let go of the cached files in memory.  This leads to degraded performance in many instances.
 
 This application tries to mitigate this via polling various memory counters, and using a configured threshold, will flush the Standby Cache when free RAM as well as Standby List consumption both reach a trigger.
 
