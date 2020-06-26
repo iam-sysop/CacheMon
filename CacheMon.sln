@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheMon", "CacheMon\CacheMon.csproj", "{17344CC0-8DFD-4A7F-B92C-1735CE0FBACA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17344CC0-8DFD-4A7F-B92C-1735CE0FBACA}.Debug|x64.ActiveCfg = Debug|x64
+		{17344CC0-8DFD-4A7F-B92C-1735CE0FBACA}.Debug|x64.Build.0 = Debug|x64
+		{17344CC0-8DFD-4A7F-B92C-1735CE0FBACA}.Release|x64.ActiveCfg = Release|x64
+		{17344CC0-8DFD-4A7F-B92C-1735CE0FBACA}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0845A895-94AA-470D-B5D0-F492C93D11EE}
+	EndGlobalSection
+EndGlobal
