@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Security.Principal;
+using System.Windows.Forms;
 
 namespace CacheMon
 {
@@ -40,7 +41,7 @@ namespace CacheMon
                     }
 
 
-                    // Console.WriteLine("UpdateChangePermissions: SE_PROFILE_SINGLE_PROCESS_PRIVILEGE");
+                    
 
 
 
@@ -70,7 +71,7 @@ namespace CacheMon
                     }
 
 
-                    // Console.WriteLine("UpdateChangePermissions: SE_DEBUG_PRIVILEGE");
+                    
 
 
 
@@ -100,7 +101,7 @@ namespace CacheMon
                     }
 
 
-                    // Console.WriteLine("UpdateChangePermissions: SE_INCREASE_QUOTA_PRIVILEGE");
+                    
 
 
 
@@ -110,7 +111,9 @@ namespace CacheMon
             }
             catch (Exception ex)
             {
-                Console.WriteLine("PERMISSIONS ERROR ATTEMPTING ELEVATION: " + ex.Message + ", " + ex.InnerException);
+
+                MessageBox.Show("WARNING:  CacheMon is unable to elevate it's permissions.  \r\nCacheMon requires to be run with Administrator rights to communicate with Windows OS.", "ERROR!", MessageBoxButtons.OK);
+                
             }
 
 

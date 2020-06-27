@@ -195,9 +195,18 @@ namespace CacheMon
         public static bool EmptyWorkingSet(Process _process)
         {
 
-            IntPtr _pHandle = _OpenProcess((uint)(PROCESS_ACCESS_RIGHTS.PROCESS_QUERY_INFORMATION | PROCESS_ACCESS_RIGHTS.PROCESS_SET_INFORMATION), false, _process.Id);            
+            IntPtr _pHandle = _OpenProcess((uint)(PROCESS_ACCESS_RIGHTS.PROCESS_QUERY_INFORMATION | PROCESS_ACCESS_RIGHTS.PROCESS_SET_INFORMATION), false, _process.Id);
+            
+            bool _emptyStatus = false;
 
-            bool _emptyStatus = _EmptyWorkingSet(_pHandle);
+            try
+            {
+                _emptyStatus = _EmptyWorkingSet(_pHandle);
+            }
+            catch (Exception e)
+            {
+
+            }
 
             _ReleaseProcess(_pHandle);
 
@@ -231,16 +240,7 @@ namespace CacheMon
             return true;
 
         }
-
   
-
-
-
-
-
-
-
-
 
     }
 }

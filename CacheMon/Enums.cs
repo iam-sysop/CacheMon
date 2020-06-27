@@ -439,7 +439,7 @@ namespace CacheMon
 			public long CompressSize;
 			public long CompressedSize;
 			public long NonCompressedSize;
-		};
+		}
 
 		[StructLayout(LayoutKind.Sequential)]
 		public struct SYSTEM_MEMORY_LIST_INFORMATION

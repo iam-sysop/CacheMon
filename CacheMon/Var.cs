@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Windows.Forms;
+
 
 namespace CacheMon
 {
@@ -8,16 +8,16 @@ namespace CacheMon
 
 		public static class Var
 		{
-			public static double PhysTotalMem { get; set; }         // physical total
-			public static double PhysInUseMem { get; set; }          // physical free
+			public static double PhysTotalMem { get; set; }   
+			public static double PhysInUseMem { get; set; }    
 			public static double PhysFreeMem { get; set; }
 			public static double PhysUnusedMem { get; set; }
 			public static double CommitTotal { get; set; }
-			public static double KernelTotalMem { get; set; }              // kernal total (paged + nonpaged)
+			public static double KernelTotalMem { get; set; }  
 			public static double KernelVirtMem { get; set; }
 			public static double KernelPhysMem { get; set; }
-			public static double SystemCacheMem { get; set; }           // standby + working set 
-			public static double SystemPageSize { get; set; }           // System Memory Page Size (2^20)
+			public static double SystemCacheMem { get; set; }   
+			public static double SystemPageSize { get; set; }   
 			public static double SystemCompressed { get; set; }
 			public static double ModifiedCached { get; set; }
 			public static double ModifiedInUse { get; set; }
